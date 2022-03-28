@@ -24,13 +24,12 @@ spec:
     type: RollingUpdate
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: todo-demo-app
         deploymentconfig: todo-demo-app
     spec:
       containers:
-      - image: quay.io/siamaksade/demo/todo-demo-app:latest
+      - image: quay.io/siamaksade/todo-demo-app:latest
         imagePullPolicy: Always
         name: todo-demo-app
         ports:
@@ -38,7 +37,6 @@ spec:
           protocol: TCP
         - containerPort: 8443
           protocol: TCP
-        resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
