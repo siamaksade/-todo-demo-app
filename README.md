@@ -40,6 +40,7 @@ docker run --ulimit memlock=-1:-1 -it --rm=true --memory-swappiness=0 \
     -p 5432:5432 postgres:10.5
 target/todo-backend-*-runner
 ```
+
 ## Other links
 
 - http://localhost:8080/health (Show the build in Health check for the datasource)
